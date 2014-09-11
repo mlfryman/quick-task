@@ -6,6 +6,7 @@
   angular.module('quick-task')
   .controller('PrioritiesCtrl', ['$scope', 'Priority', function($scope, Priority){
     $scope.title = 'Priorities';
+    $scope.sort = 'value';
     $scope.priority = {};
     $scope.priorities = [];
 
