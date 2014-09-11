@@ -6,6 +6,7 @@ var morgan         = require('morgan'),
     session        = require('express-session'),
     RedisStore     = require('connect-redis')(session),
     debug          = require('../lib/debug'),
+    priorities     = require('../controllers/priorities'),
     home           = require('../controllers/home');
 
 module.exports = function(app, express){
@@ -19,6 +20,9 @@ module.exports = function(app, express){
   app.use(debug.info);
 
   app.get('/home', home.index);
+  // Node receives POST from Angular, which creates the priority & saves to DB
+  app.post('/priorities', priorities.create);
+  app.get('/priorities', priorities.index);
 
   console.log('Express: Routes Loaded');
 };

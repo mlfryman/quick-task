@@ -2,3 +2,35 @@
   .col-xs-12
     h3 {{title}}
 .row
+  .col-xs-3
+    h4 Create Priority Level
+    form(role='form', novalidate, name='priorityForm')
+      .form-group
+        label(for='name') Name
+        input.form-control#name(type='text', name='name', ng-model='priority.name', required, ng-minlength='3', autofocus)
+      .form-group
+        label(for='value') Value
+        input.form-control#value(type='number', name='value', ng-model='priority.value', required)
+      .form-group
+        label(for='color') Color
+        input.form-control#color(type='color', name='color', ng-model='priority.color', required)
+      button.btn.btn-success(ng-show='priorityForm.$valid', ng-click='add()') Add Priority
+  .col-xs-3
+br
+.row
+  .col-xs-3
+    .panel.panel-primary
+      .panel-heading
+        h3.panel-title Priorities
+      .panel-body
+        table.table.table-striped.table-hover.table-bordered
+          thead
+            tr
+              th Name
+              th Value
+              th Color
+          tbody
+            tr(ng-repeat='p in priorities | orderBy:"value"')
+              td {{p.name}}
+              td {{p.value}}
+              td(ng-style='{"background-color":p.color}') {{p.color}}
