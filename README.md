@@ -1,7 +1,7 @@
 ## Quick Task
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/mlfryman/quick-task.svg)](https://travis-ci.org/mlfryman/quick-task)
+[![Coverage Status](https://coveralls.io/repos/mlfryman/quick-task/badge.png)](https://coveralls.io/r/mlfryman/quick-task)
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
