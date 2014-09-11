@@ -1,0 +1,46 @@
+.row
+  .col-xs-12
+    h3 {{title}}
+.row
+  .col-xs-3
+    h4 Add Task
+    form(role='form', novalidate, name='taskForm')
+      .form-group
+        label(for='name') Name
+        input.form-control#name(type='text', name='name', ng-model='task.name', required, ng-minlength='3', autofocus)
+      .form-group
+        label(for='dueDate') Due Date
+        input.form-control#dueDate(type='date', name='dueDate', ng-model='task.dueDate', required)
+      .form-group
+        label(for='priorityId') Priority
+        select#priorityId(name='priorityId', ng-model='task.priorityId', ng-options='p._id as p.name for p in priorities', required)
+          option(selected='') Select Priority
+      button.btn.btn-success(ng-show='taskForm.$valid', ng-click='add()') Add Task
+  .col-xs-3
+  .col-xs-6
+    .panel.panel-primary
+      .panel-heading
+        h3.panel-title Tasks
+      .panel-body
+        .form-group
+          label(for='sort') Sort
+          select.form-control(name='sort', ng-model='sort')
+            option(value='name') Name Ascending
+            option(value='-name') Name Descending
+            option(value='due') Due Ascending
+            option(value='-due') Due Descending
+            option(value='priority.value') Priority Ascending
+            option(value='-priority.value') Priority Descending
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th Complete
+              th Name
+              th Due Date
+              th Priority
+          tbody
+            tr(ng-repeat='t in tasks | orderBy:sort', ng-class='{complete:t.isComplete}')
+              td: input(type='checkbox', name='completed', ng-model='t.isComplete')
+              td {{t.name}}
+              td {{t.dueDate | date:'mediumDate'}}
+              td(ng-style='{"background-color":t.priority.color}') {{t.priority.name}}

@@ -17,4 +17,3 @@
     return {create:create, all:all};
   }]);
 })();
-

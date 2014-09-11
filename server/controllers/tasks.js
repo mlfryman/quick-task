@@ -3,8 +3,8 @@
 var Task = require('../models/task');
 
 exports.create = function(req, res){
-  Task.create(req.body, function(){
-    res.redirect('/tasks');
+  Task.create(req.body, function(err, task){
+    res.send({task:task});
   });
 };
 

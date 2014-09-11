@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('quiktask')
+  angular.module('quick-task')
   .controller('HomeCtrl', [function(){
   }]);
 })();
