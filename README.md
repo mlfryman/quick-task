@@ -4,8 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/mlfryman/quick-task/badge.png)](https://coveralls.io/r/mlfryman/quick-task)
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
+_forthcoming_
 
 ### Description
 Quick Task is a to-do list app that uses Node.js & Angular.js.
