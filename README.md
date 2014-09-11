@@ -1,4 +1,4 @@
-## name of project
+## Quick Task
 ### Code Badges
 build status icon
 coverage status icon
@@ -8,7 +8,7 @@ coverage status icon
 ![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/two.jpg)
 
 ### Description
-write a description about your project
+Quick Task is a to-do list app that uses Node.js & Angular.js.
 
 ### Models
 ```
@@ -29,9 +29,9 @@ Collection 2
 ```
 
 ### Features
-- [x] Feature 1
-- [ ] Feature 2
-- [x] Feature 3
+- [x] Angular.js
+- [x] Node.js
+- [ ] Feature 3
 
 ### Running Tests
 ```bash
@@ -40,7 +40,7 @@ $ npm test
 ```
 
 ### Contributors
-- [Chyld Medford](https://github.com/chyld)
+- [Melanie Fryman](https://github.com/mlfryman)
 
 ### License
 [MIT](LICENSE)
